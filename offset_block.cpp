@@ -120,14 +120,7 @@ int main(int argc, char **argv)
 
 void configure(TGraph *gr){
 	gr->GetXaxis()->SetLabelSize(0.05);
-	// gr->GetXaxis()->SetLabelOffset(0.02);
-
 	gr->GetXaxis()->SetTitleSize(0.05);
-	// gr->GetXaxis()->SetTitleOffset(1.1);
-
 	gr->GetYaxis()->SetLabelSize(0.05);
-	// gr->GetYaxis()->SetLabelOffset(0.02);
-
 	gr->GetYaxis()->SetTitleSize(0.05);
-	// gr->GetYaxis()->SetTitleOffset(1.1);
 }
