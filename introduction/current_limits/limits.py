@@ -551,12 +551,12 @@ class LimitFigure:
         self.ax.title.set_fontsize(size)
 
     def show(self, legend_size=12, save_name=None, *args, **kwargs):
-        # if self.e_power==2:
-        #     self.ax.add_artist(plt.legend(handles=self.neutrino_models, loc=4, fontsize=legend_size))
-        #     self.ax.add_artist(plt.legend(handles=self.custom_limits, loc=2, fontsize=legend_size))
-        # elif self.e_power==1:
-        #     self.ax.add_artist(plt.legend(handles=self.neutrino_models, loc=3, fontsize=legend_size))
-        #     self.ax.add_artist(plt.legend(handles=self.custom_limits, loc=1, fontsize=legend_size))
+        if self.e_power==2:
+            self.ax.add_artist(plt.legend(handles=self.neutrino_models, loc=4, fontsize=legend_size))
+            self.ax.add_artist(plt.legend(handles=self.custom_limits, loc=2, fontsize=legend_size))
+        elif self.e_power==1:
+            self.ax.add_artist(plt.legend(handles=self.neutrino_models, loc=3, fontsize=legend_size))
+            # self.ax.add_artist(plt.legend(handles=self.custom_limits, loc=1, fontsize=legend_size))
         plt.tight_layout()
         if save_name is not None:
             plt.savefig(save_name, *args, **kwargs)
