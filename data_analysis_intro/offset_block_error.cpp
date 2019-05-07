@@ -94,7 +94,7 @@ int main(int argc, char **argv)
 		graphs[chan]->SetLineWidth(1);
 	}
 	char save_title[300];
-	sprintf(save_title,"first3_station%d_run%d_event%d.png",stationId,runNum,realAtriEvPtr->eventNumber);
+	sprintf(save_title,"offsetblock_station%d_run%d_event%d.png",stationId,runNum,realAtriEvPtr->eventNumber);
 	c->SaveAs(save_title);
 	
 }//close the main program
