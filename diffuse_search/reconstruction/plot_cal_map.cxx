@@ -99,8 +99,8 @@ int main(int argc, char **argv)
 
 	TCanvas *c = new TCanvas("","",4*1100,4*850);
 		map->Draw("colz");
-		map->GetYaxis()->SetTitle("Elevation (degree)");
-		map->GetXaxis()->SetTitle("Azimuth (degree)");
+		map->GetYaxis()->SetTitle("Elevation Angle (degree)");
+		map->GetXaxis()->SetTitle("Azimuthal Angle (degree)");
 		map->GetZaxis()->SetTitle("Summed Correlation Value (#Sigma C_{i,j})");
 		map->GetYaxis()->CenterTitle();
 		map->GetXaxis()->CenterTitle();
@@ -112,6 +112,7 @@ int main(int argc, char **argv)
 		gPad->SetRightMargin(0.15);
 		gPad->SetLeftMargin(0.10);
 		gPad->SetBottomMargin(0.10);
+		map->GetZaxis()->SetRangeUser(0,0.6);
 	char save_title[300];
 	sprintf(save_title,"/users/PAS0654/osu0673/GeomStuff/thesis_figures/diffuse_search/reconstruction/map_station%d_run%d_event%d.png",stationId,runNum,realAtriEvPtr->eventNumber);
 	c->SaveAs(save_title);
